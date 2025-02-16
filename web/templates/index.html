@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Attendance Report</title>
+</head>
+<body>
+    <h2>Attendance Records</h2>
+
+
+    {% if attendance %}
+    <table border="1">
+        <tr>
+            <th>Name</th>
+            <th>Time</th>
+        </tr>
+        {% for record in attendance %}
+        <tr>
+            <td>{{ record.Name }}</td>
+            <td>{{ record.Time }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    {% else %}
+    <p>No attendance records found.</p>
+    {% endif %}
+</body>
+</html>
